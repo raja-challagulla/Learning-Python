@@ -7,8 +7,8 @@ n = int(input("Enter the count of numbers of to calculate Average : "))
 assert n > 0
 number_list = []
 for i in range(n):
-    element = int(input(f"Enter the {i} number in the list: "))
+    element = int(input(f"Enter the {i + 1} number in the list: "))
     number_list.append(element)
 
-num_avg = sum(number_list)/n
-print("the average is :", num_avg)
+num_avg = sum(number_list) / n
+print("the average is :", round(num_avg, 3))
