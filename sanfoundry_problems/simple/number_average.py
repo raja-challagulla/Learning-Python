@@ -1,14 +1,15 @@
 """ A program to check average of numbers
 """
 
-# Read total numbers count from the user
+# calculate the count of numbers in the program
 
-n = int(input("Enter the count of numbers of to calculate Average : "))
-assert n > 0
 number_list = []
-for i in range(n):
-    element = int(input(f"Enter the {i + 1} number in the list: "))
-    number_list.append(element)
+while True:
+    element = input("Enter the numbers to calculate Average. Once done entering the numbers enter q to stop: ")
+    if element == 'q':
+        break
+    else:
+        number_list.append(int(element))
 
-num_avg = sum(number_list) / n
-print("the average is :", round(num_avg, 3))
+num_avg = sum(number_list) / len(number_list)
+print("the average is :", round(num_avg, 2))
